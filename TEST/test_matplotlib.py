@@ -1,5 +1,5 @@
 # Matplotlib is the big name for drawing graphs. 
-# But is is a bit confusing because matplotlib contains multiple libraries where Plotly is one of them.
+# But is is a bit confusing because matplotlib contains multiple libraries where pyplot is one of them.
 
 
 import matplotlib.pyplot as plt
