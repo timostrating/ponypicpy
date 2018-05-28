@@ -82,9 +82,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `ponydb`.`news_appearences`
+-- Table `ponydb`.`news_appearances`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ponydb`.`news_appearences` (
+CREATE TABLE IF NOT EXISTS `ponydb`.`news_appearances` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `date` DATETIME NOT NULL,
   `location` VARCHAR(45) NOT NULL,
@@ -93,14 +93,14 @@ CREATE TABLE IF NOT EXISTS `ponydb`.`news_appearences` (
   `category_id` INT NOT NULL,
   `media_id` INT NOT NULL,
   PRIMARY KEY (`id`, `category_id`, `media_id`),
-  INDEX `fk_news_appearences_category1_idx` (`category_id` ASC),
-  INDEX `fk_news_appearences_media1_idx` (`media_id` ASC),
-  CONSTRAINT `fk_news_appearences_category1`
+  INDEX `fk_news_appearances_category1_idx` (`category_id` ASC),
+  INDEX `fk_news_appearances_media1_idx` (`media_id` ASC),
+  CONSTRAINT `fk_news_appearances_category1`
     FOREIGN KEY (`category_id`)
     REFERENCES `ponydb`.`categories` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_news_appearences_media1`
+  CONSTRAINT `fk_news_appearances_media1`
     FOREIGN KEY (`media_id`)
     REFERENCES `ponydb`.`media` (`id`)
     ON DELETE NO ACTION
