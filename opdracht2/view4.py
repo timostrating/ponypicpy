@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import datetime
 import mysql.connector
 
-cnx = mysql.connector.connect(user='root', password='erstaateenpaardindegang', host='aitai.nl', database='ponydb', port=15069)
+cnx = mysql.connector.connect(user='___', password='___', host='___', database='___', port=12345)
 cursor = cnx.cursor()
 
 query = ("""
