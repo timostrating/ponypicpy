@@ -39,4 +39,10 @@ plt.plot(plot)
 #     "zondag"
 # ])
 
+font = {'family':'serif', 'color':'blue', 'weight':'normal', 'size':16}
+fontbig = {'family':'serif', 'color':'blue', 'weight':'bold', 'size':24}
+
+plt.title('Het aantal overstrappers over het hele jaar', fontdict=fontbig)
+plt.ylabel('Aantal overstappers', fontdict=font)
+plt.xlabel('dag van het jaar', fontdict=font)
 plt.show()
