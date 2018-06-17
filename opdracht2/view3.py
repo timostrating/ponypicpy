@@ -3,7 +3,7 @@ import datetime
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-cnx = mysql.connector.connect(user='root', password='erstaateenpaardindegang', host='aitai.nl', port="15069", database='ponydb')
+cnx = mysql.connector.connect(user='___', password='___', host='___', database='___', port=12345)
 cursor = cnx.cursor()
 
 query = ("""
@@ -16,8 +16,6 @@ cursor.execute(query)
 dates=[]; counts=[]
 for (datum, count) in cursor:
     dates.append(datum); counts.append(count)
-
-font = {'family':'serif', 'color':'blue', 'weight':'normal', 'size':16,}
 
 fig, ax1 = plt.subplots()
 ax1.plot(dates, counts)
@@ -56,10 +54,13 @@ ax2.set_ylim(0,7)
 
 
 
+font = {'family':'serif', 'color':'blue', 'weight':'normal', 'size':16}
+fontbig = {'family':'serif', 'color':'blue', 'weight':'bold', 'size':24}
 
-
-# fig.autofmt_xdate()
-# plt.xlabel('Month', fontdict=font)
+plt.title('Overstappers in relatie tot de nieuwuitingen', fontdict=fontbig)
+# ax2.ylabel('Aantal nieuwuitingen', fontdict=fontred)
+# ax1.ylabel('Aantal overstappers', fontdict=fontblue)
+plt.xlabel('Maanden van het jaar', fontdict=font)
 plt.show()
 
 cursor.close()

@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import datetime
 import mysql.connector
 
-cnx = mysql.connector.connect(user='root', password='erstaateenpaardindegang', host='aitai.nl', database='ponydb', port=15069)
+cnx = mysql.connector.connect(user='___', password='___', host='___', database='___', port=12345)
 cursor = cnx.cursor()
 
 query = ("""
@@ -39,4 +39,10 @@ plt.xticks([i for i in range(0, 7)], [
     "zondag"
 ])
 
+font = {'family':'serif', 'color':'blue', 'weight':'normal', 'size':16}
+fontbig = {'family':'serif', 'color':'blue', 'weight':'bold', 'size':24}
+
+plt.title('Gemiddeld aantal overstappers over een week', fontdict=fontbig)
+plt.ylabel('Aantal overstappers', fontdict=font)
+plt.xlabel('dag van de week', fontdict=font)
 plt.show()
