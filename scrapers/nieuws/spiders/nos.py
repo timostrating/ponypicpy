@@ -3,7 +3,7 @@ from datetime import timedelta, date
 import urllib2
 
 class NosSpider(scrapy.Spider):
-    name = "nieuws"
+    name = "nos"
     start_urls = []
 
     def daterange(self, start_date, end_date):
