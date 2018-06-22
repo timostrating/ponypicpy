@@ -2,8 +2,8 @@ import scrapy
 from datetime import timedelta, date
 import json
 
-class NosSpider(scrapy.Spider):
-    name = "nos"
+class NrcSpider(scrapy.Spider):
+    name = "nrc"
     start_urls = []
     articles_in_one_API_call = 100
 

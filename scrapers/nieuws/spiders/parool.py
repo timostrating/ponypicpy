@@ -18,8 +18,8 @@ class ParoolSpider(scrapy.Spider):
             self.start_urls.append("https://www.parool.nl/archief/detail/" + single_date.strftime("%d%m%Y"))
         
     def parse(self, response):
-        for nos in response.css('article'):
-            url = nos.css('a').xpath('@href').extract_first()
+        for article in response.css('article'):
+            url = article.css('a').xpath('@href').extract_first()
             yield scrapy.Request(url, callback=self.parse_article)
 
     def parse_article(self, response):

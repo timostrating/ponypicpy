@@ -2,7 +2,7 @@ import scrapy
 from datetime import timedelta, date
 import urllib2
 
-class NosSpider(scrapy.Spider):
+class NamSpider(scrapy.Spider):
     name = "nam"
     start_urls = ["https://www.nam.nl/nieuws/2014.html"]
 
