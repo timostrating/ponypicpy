@@ -1,0 +1,33 @@
+
+{
+    "compilerOptions": {
+        "baseUrl": "",
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "module": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "target": "es5",
+        "paths": {
+            "@angular/*": [
+                "node_modules/@angular/*"
+            ]
+        }
+    },
+    "include": [
+        "node_modules/ng4-fittext/*.d.ts",
+        "src/**/*",
+        "node_modules/highcharts-angular/src/app/*"
+    ],
+    "exclude": [],
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
