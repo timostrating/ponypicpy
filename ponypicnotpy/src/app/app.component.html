@@ -3,7 +3,9 @@
     <h1>
         Dit is zo'n mooie site
     </h1>
-    
-    <router-outlet></router-outlet>
-
 </div>
+
+<main [@routerAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+    <!-- Op deze plek komt de pagina te staan -->
+</main>
