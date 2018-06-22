@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { IndexComponent } from './pages/index/index.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { FigureOneComponent } from './pages/figure-one/figure-one.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FigureOneComponent
   ],
   imports: [
     BrowserModule,
