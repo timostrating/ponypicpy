@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
 router-outlet ~ * {
     position: absolute;
     width: 100%;
