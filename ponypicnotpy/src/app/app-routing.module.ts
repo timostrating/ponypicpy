@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './pages/index/index.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -9,15 +8,25 @@ const routes: Routes = [
     {
         path: "",
         pathMatch: "full",
-        component: IndexComponent
+        component: IndexComponent,
+        data: {
+            index: true,
+            title: "hOmEPAgiNA!!"
+        }
     },
     {
         path: "figuur-1",
-        component: FigureOneComponent
+        component: FigureOneComponent,
+        data: {
+            title: "fiGUUR 1!!"
+        }
     },
     {   // 404
         path: "**",
-        component: NotFoundComponent
+        component: NotFoundComponent,
+        data: {
+            title: "Er is hier niks te zien"
+        }
     }
 ];
 

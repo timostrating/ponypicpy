@@ -9,6 +9,8 @@ import { routerAnimation } from './animations/routerAnimation';
 })
 export class AppComponent {
 
-
+    getState(outlet): any {
+        return outlet.activatedRouteData.index ? "index" : outlet
+    }
 
 }

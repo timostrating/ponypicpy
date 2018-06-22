@@ -1,11 +1,5 @@
 <!--Als je dit leest ben je fucking cool.-->
-<div style="text-align:center">
-    <h1>
-        Dit is zo'n mooie site
-    </h1>
-</div>
-
-<main [@routerAnimation]="o.isActivated ? o.activatedRoute : ''">
+<main [@routerAnimation]="getState(o)">
     <router-outlet #o="outlet"></router-outlet>
     <!-- Op deze plek komt de pagina te staan -->
 </main>
