@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as Highcharts from 'highcharts';
+
 @Component({
-  selector: 'app-figure-one',
-  templateUrl: './figure-one.component.html',
-  styleUrls: ['./figure-one.component.css']
+    selector: 'app-figure-one',
+    templateUrl: './figure-one.component.html',
+    styleUrls: ['./figure-one.component.css']
 })
 export class FigureOneComponent implements OnInit {
 
-  constructor() { }
+    Highcharts = Highcharts;
+    chartOptions = {
+        series: [{
+            data: [1, 2, 3]
+        }]
+    };
 
-  ngOnInit() {
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
 
 }

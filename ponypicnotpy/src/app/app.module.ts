@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HighchartsChartComponent } from 'highcharts-angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
@@ -15,7 +16,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     IndexComponent,
     NotFoundComponent,
     FigureOneComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    HighchartsChartComponent
   ],
   imports: [
     BrowserModule,
