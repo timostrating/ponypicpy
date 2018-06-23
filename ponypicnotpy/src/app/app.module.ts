@@ -9,6 +9,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FigureOneComponent } from './pages/figure-one/figure-one.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { FigureTwoComponent } from './pages/figure-two/figure-two.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     NotFoundComponent,
     FigureOneComponent,
     ToolbarComponent,
-    HighchartsChartComponent
+    HighchartsChartComponent,
+    FigureTwoComponent
   ],
   imports: [
     BrowserModule,
