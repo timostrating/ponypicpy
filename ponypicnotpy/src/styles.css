@@ -16,6 +16,10 @@ body {
     margin: 0;
 }
 
+.highcharts-credits {
+    display: none;
+}
+
 router-outlet ~ * {
     position: absolute;
     width: 100%;
