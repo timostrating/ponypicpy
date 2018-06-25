@@ -16,6 +16,7 @@
   "dependencies": {
     "express": "^4.16.3",
     "express-dynamic-static": "^1.0.4",
+    "express-minify": "^1.0.0",
     "mysql": "^2.15.0"
   }
 }

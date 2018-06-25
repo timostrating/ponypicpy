@@ -1,6 +1,7 @@
 
 const express = require("express");
 const app = express();
+const minify = require("express-minify");
 // const db = require("./database.js");
 
 ///////////////////////////////////////////////////  
@@ -23,6 +24,11 @@ const apiFiles = [
 for (var i in apiFiles)
     require("./" + apiFiles[i] + ".js").apiFunctions(api);
 
+app.get("/", (req, res, next) => {
+    console.log("er zit iemand op de site ofzo");
+    next();
+});
+app.use(minify());
 app.use("/", express.static(__dirname + "/web_app"));
 app.use("*", (req, res) => res.sendFile(__dirname + "/web_app/index.html"));
-app.listen(8080, () => console.log("Ponypic listening on port 8080"));
+app.listen(9090, () => console.log("Ponypic listening on port 8080"));
