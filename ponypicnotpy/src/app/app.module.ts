@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { HighchartsChartComponent } from 'highcharts-angular';
 
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { FigureTwoComponent } from './pages/figure-two/figure-two.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

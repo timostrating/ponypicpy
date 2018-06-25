@@ -2,7 +2,6 @@
 const express = require("express");
 const app = express();
 const minify = require("express-minify");
-// const db = require("./database.js");
 
 ///////////////////////////////////////////////////  
 //                                               //
@@ -19,10 +18,10 @@ api.use((_req, res, next) => {
 });
 
 const apiFiles = [
-    // "test"
+    "charts/vrije-dagen"
 ];
 for (var i in apiFiles)
-    require("./" + apiFiles[i] + ".js").apiFunctions(api);
+    require("./" + apiFiles[i] + ".js")(api);
 
 app.get("/", (req, res, next) => {
     console.log("er zit iemand op de site ofzo");
