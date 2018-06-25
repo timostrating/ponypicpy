@@ -31,4 +31,4 @@ app.get("/", (req, res, next) => {
 app.use(minify());
 app.use("/", express.static(__dirname + "/web_app"));
 app.use("*", (req, res) => res.sendFile(__dirname + "/web_app/index.html"));
-app.listen(9090, () => console.log("Ponypic listening on port 8080"));
+app.listen(9090, () => console.log("Ponypic listening on port 9090"));
