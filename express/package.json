@@ -1,0 +1,22 @@
+{
+  "name": "ponyexpress",
+  "version": "1.0.0",
+  "description": "very much pony very express such javascript very much NPM many Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ponypicpy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-dynamic-static": "^1.0.4",
+    "express-minify": "^1.0.0",
+    "mysql": "^2.15.0"
+  }
+}
