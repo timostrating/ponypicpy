@@ -13,9 +13,7 @@ export class FigureOneComponent implements OnInit {
 
     Highcharts = Highcharts;
     chartOptions: object = {
-        series: [{
-            data: [1, 2, 3]
-        }]
+        series: [{ data: [] }]
     };
 
     constructor(

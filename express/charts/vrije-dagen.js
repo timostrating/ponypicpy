@@ -6,8 +6,26 @@ module.exports = (api) => {
     api.get("/vrije-dagen", (req, res) => {
 
         res.json({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                categories: ['Apples', 'Bananas', 'Oranges']
+            },
+            yAxis: {
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
             series: [{
-                data: [3, 3, 4, 5, 6, 6, 1, 2, 4, 5, 0]
+                name: 'Jane',
+                data: [1, 0, 4]
+            }, {
+                name: 'John',
+                data: [5, 7, 3]
             }]
         });
 
