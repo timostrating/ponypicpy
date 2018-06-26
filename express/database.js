@@ -1,7 +1,12 @@
 const fs = require("fs");
 const mysql = require("mysql");
 const connection = mysql.createConnection(
-    JSON.parse(fs.readFileSync("./database-connection.json").toString())
+    Object.assign(
+        JSON.parse(fs.readFileSync(__dirname + "/database-connection.json").toString()),
+        {
+            dateStrings: true
+        }
+    )
 );
 
 // example file database-connection:

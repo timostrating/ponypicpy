@@ -27,3 +27,11 @@ router-outlet ~ * {
     min-height: 100vh;
     background: white;
 }
+
+.legend-square {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px;
+    border: 1px lightgrey solid;
+}

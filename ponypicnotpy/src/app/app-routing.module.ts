@@ -15,9 +15,20 @@ const routes: Routes = [
             title: "hOmEPAgiNA!!"
         }
     },
-    { path: "figuur-1", component: FigureOneComponent },
-    { path: "figuur-2", component: FigureTwoComponent }, 
-    { path: "**", component: NotFoundComponent } // 404
+    {
+        path: "vrije-feest-dagen",
+        component: FigureOneComponent,
+        data: {
+            title: "Vrije- / feestdagem"
+        }
+    },
+    {   // 404
+        path: "**",
+        component: NotFoundComponent,
+        data: {
+            title: "Er is hier niks te zien"
+        }
+    }
 ];
 
 @NgModule({
