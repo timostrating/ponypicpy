@@ -5,7 +5,7 @@ import * as Highcharts from 'highcharts';
 @Component({
     selector: 'app-figure-one',
     templateUrl: './figure-one.component.html',
-    styleUrls: ['./figure-one.component.css']
+    styleUrls: ['./figure-one.component.scss']
 })
 export class FigureOneComponent implements OnInit {
 
