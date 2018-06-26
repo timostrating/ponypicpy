@@ -13,6 +13,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FigureTwoComponent } from './pages/figure-two/figure-two.component';
 import { FeaturedcardsComponent } from './components/featuredcards/featuredcards.component';
 import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
+import { FigureGroenGrijsComponent } from './pages/figure-groengrijs/figure-groengrijs.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
     HighchartsChartComponent,
     FigureTwoComponent,
     FeaturedcardsComponent,
-    FigureNlpComponent
+    FigureNlpComponent,
+    FigureGroenGrijsComponent
   ],
   imports: [
     BrowserModule,
