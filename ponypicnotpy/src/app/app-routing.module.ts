@@ -16,10 +16,35 @@ const routes: Routes = [
             title: "hOmEPAgiNA!!"
         }
     },
-    { path: "figuur-1", component: FigureOneComponent },
-    { path: "figuur-2", component: FigureTwoComponent }, 
-    { path: "figuur-nlp", component: FigureNlpComponent }, 
-    { path: "**", component: NotFoundComponent } // 404
+    {
+        path: "vrije-feest-dagen",
+        component: FigureOneComponent,
+        data: {
+            title: "Vrije- / feestdagem"
+        }
+    },
+    { 
+        path: "figuur-nlp", 
+        component: FigureNlpComponent,
+        data: {
+            title: "hoi dit is een titel"
+        }
+    },
+    {
+        path: "figuur-2",
+        component: FigureTwoComponent,
+        data: {
+            title: "FigUUr 2!"
+        }
+    },
+    {   // 404
+        path: "**",
+        component: NotFoundComponent,
+        data: {
+            title: "Er is hier niks te zien"
+        }
+    }
+
 ];
 
 @NgModule({
