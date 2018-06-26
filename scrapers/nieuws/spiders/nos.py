@@ -11,8 +11,8 @@ class NosSpider(scrapy.Spider):
             yield start_date + timedelta(n)
 
     def __init__(self):
-        start_date = date(2014, 1, 1)
-        end_date = date(2014, 2, 1)
+        start_date = date(2014, 6, 1)
+        end_date = date(2014, 7, 1)
 
         for single_date in self.daterange(start_date, end_date):
             self.start_urls.append("https://nos.nl/nieuws/archief/" + single_date.strftime("%Y-%m-%d"))

@@ -1,6 +1,7 @@
 import scrapy
 from datetime import timedelta, date
-import urllib2
+import dateparser
+
 
 class ParoolSpider(scrapy.Spider):
     name = "parool"
@@ -11,8 +12,8 @@ class ParoolSpider(scrapy.Spider):
             yield start_date + timedelta(n)
 
     def __init__(self):
-        start_date = date(2014, 1, 1)
-        end_date = date(2014, 2, 1)
+        start_date = date(2014, 6, 1)
+        end_date = date(2014, 7, 1)
 
         for single_date in self.daterange(start_date, end_date):
             self.start_urls.append("https://www.parool.nl/archief/detail/" + single_date.strftime("%d%m%Y"))
@@ -26,7 +27,7 @@ class ParoolSpider(scrapy.Spider):
         yield {
             'naam': 'parool.nl',
             'url': response.url,
-            'datum': response.css('footer time').xpath('./@datetime').extract_first(),
+            'datum': dateparser.parse(response.css('footer time').xpath('./@datetime').extract_first().split(" ")[0]),
             'titel': response.css('.article__header .article__title ::text').extract_first(),
             'tekst': (''.join(response.css(".article__wrapper ::text").extract())).replace("\t", "").replace("\n", "")
         }

@@ -1,6 +1,6 @@
 import scrapy
 from datetime import timedelta, date
-import urllib2
+import dateparser
 
 class BarneveldsekrantSpider(scrapy.Spider):
     name = "barneveldsekrant"
@@ -11,7 +11,7 @@ class BarneveldsekrantSpider(scrapy.Spider):
             yield start_date + timedelta(n)
 
     def __init__(self):
-        for i in range(0, 128): # er zijn 1442188 artikelen
+        for i in range(96, 128): # er zijn 1442188 artikelen
             self.start_urls.append('http://barneveldsekrant.nl/search/site?page={0}&f%5B0%5D=ds_created%3A%5B2014-01-01T00%3A00%3A00Z%20TO%202015-01-01T00%3A00%3A00Z%5D'.format(i))
         
     def parse(self, response):
@@ -23,7 +23,7 @@ class BarneveldsekrantSpider(scrapy.Spider):
         yield {
             'naam': 'barneveldsekrant.nl',
             'url': response.url,
-            'datum': response.css('.field-name-post-date-van-de-redactie ::text').extract_first().split(",")[0].replace("\n", ""),
+            'datum': dateparser.parse(response.css('.field-name-post-date-van-de-redactie ::text').extract_first().split(",")[0].replace("\n", "")),
             'titel': response.css('h1 ::text').extract_first().replace("\n", ""),
             'tekst': (''.join(response.css(".field-name-body p ::text").extract())).replace("\t", "").replace("\n", "").replace("\r", "")
         }

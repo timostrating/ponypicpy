@@ -2,6 +2,8 @@ import scrapy
 from datetime import timedelta, date
 import urllib2
 
+xstr = lambda s: s or ""
+
 class MeppelercourantSpider(scrapy.Spider):
     name = "meppelercourant"
     start_urls = []
@@ -23,7 +25,7 @@ class MeppelercourantSpider(scrapy.Spider):
         yield {
             'naam': 'meppelercourant.nl',
             'url': response.url,
-            'datum': filter(None, response.css('.comp-nieuws-detail-credits ::text').extract_first().split(" "))[3:][:3].replace(",", " "),
+            'datum': filter(None, xstr(response.css('.comp-nieuws-detail-credits ::text').extract_first()).split(" "))[3:][:3].replace(",", " "),
             'titel': response.css('h1 ::text').extract_first(),
             'tekst': (''.join(response.css(".comp-nieuws-detail-text > p ::text").extract())).replace("\t", "").replace("\n", "").replace("\r", "")
         }
