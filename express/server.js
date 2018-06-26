@@ -18,7 +18,8 @@ api.use((_req, res, next) => {
 });
 
 const apiFiles = [
-    "charts/vrije-dagen"
+    "charts/vrije-dagen",
+    "charts/zon"
 ];
 for (var i in apiFiles)
     require("./" + apiFiles[i] + ".js")(api);
