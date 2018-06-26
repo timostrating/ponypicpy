@@ -11,6 +11,7 @@ import { FigureOneComponent } from './pages/figure-one/figure-one.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FigureTwoComponent } from './pages/figure-two/figure-two.component';
 import { FeaturedcardsComponent } from './components/featuredcards/featuredcards.component';
+import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FeaturedcardsComponent } from './components/featuredcards/featuredcards
     ToolbarComponent,
     HighchartsChartComponent,
     FigureTwoComponent,
-    FeaturedcardsComponent
+    FeaturedcardsComponent,
+    FigureNlpComponent
   ],
   imports: [
     BrowserModule,

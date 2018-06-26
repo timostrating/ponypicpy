@@ -4,6 +4,7 @@ import { IndexComponent } from './pages/index/index.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { FigureOneComponent } from './pages/figure-one/figure-one.component';
 import { FigureTwoComponent } from './pages/figure-two/figure-two.component';
+import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
 
 const routes: Routes = [
     { // index
@@ -17,6 +18,7 @@ const routes: Routes = [
     },
     { path: "figuur-1", component: FigureOneComponent },
     { path: "figuur-2", component: FigureTwoComponent }, 
+    { path: "figuur-nlp", component: FigureNlpComponent }, 
     { path: "**", component: NotFoundComponent } // 404
 ];
 
