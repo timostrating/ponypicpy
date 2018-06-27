@@ -19,13 +19,14 @@ api.use((_req, res, next) => {
 
 const apiFiles = [
     "charts/vrije-dagen",
-    "charts/zon"
+    "charts/zon",
+    "charts/leeftijd-groen"
 ];
 for (var i in apiFiles)
     require("./" + apiFiles[i] + ".js")(api);
 
 app.get("/", (req, res, next) => {
-    console.log("er zit iemand op de site ofzo");
+    console.log("er zit iemand op de site ofzo " + Date());
     next();
 });
 app.use(minify());
