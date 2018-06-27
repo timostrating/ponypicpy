@@ -28,7 +28,7 @@ module.exports = (api) => {
 
                 var chart = {
                     title: {
-                        text: 'De verschillende soorten nieuws uitingen'
+                        text: 'De verschillende soorten nieuwsuitingen'
                     },
                     yAxis: [{
                         opposite: true,
