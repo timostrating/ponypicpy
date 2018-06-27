@@ -38,7 +38,7 @@ module.exports = (api) => {
 
                         plotBands.push(
                             {
-                                color: "#00526b",
+                                color: "#008c2e",
                                 from: parseInt(i) - .5,
                                 to: parseInt(i) + .5
                             }
