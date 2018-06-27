@@ -42,6 +42,26 @@
 
 
 
+$num: 15;                           // STYLE HELPER CLASSES
+@while $num > -1 {
+    .m#{$num}  { margin:             #{$num}em !important; }
+    .mt#{$num} { margin-top:         #{$num}em !important; }
+    .mr#{$num} { margin-right:       #{$num}em !important; }
+    .mb#{$num} { margin-bottom:      #{$num}em !important; }
+    .ml#{$num} { margin-left:        #{$num}em !important; }
+
+    .p#{$num}  { padding:            #{$num}em !important; }
+    .pt#{$num} { padding-top:        #{$num}em !important; }
+    .pr#{$num} { padding-right:      #{$num}em !important; }
+    .pb#{$num} { padding-bottom:     #{$num}em !important; }
+    .pl#{$num} { padding-left:       #{$num}em !important; }
+
+    $num: $num - 1;
+}
+
+
+
+
 html, body {
     padding: 0;
     margin: 0;
