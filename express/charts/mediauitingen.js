@@ -31,7 +31,7 @@ module.exports = (api) => {
                         text: 'De verschillende soorten nieuws uitingen'
                     },
                     yAxis: [{
-                        min: 0,
+                        opposite: true,
                         title: {
                             text: 'Aantal nieuwsuitingen'
                         }

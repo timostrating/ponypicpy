@@ -30,7 +30,7 @@ module.exports = (api) => {
 
                 var chart = {
                     chart: { zoomType: "x" },
-                    title: { text: "TEST" },
+                    title: { text: "Groen/grijs" },
                     yAxis: { title: { text: "" } },
                     series: [{
                         name: 'Groen',
