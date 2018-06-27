@@ -81,7 +81,8 @@ router-outlet ~ * {
     width: 100%;
     z-index: 10;
     min-height: 100vh;
-    background: white;
+    background: #36374c;
+    color: white;
 }
 
 .legend-square {

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import * as Highcharts from 'highcharts';
-import { API_URL } from '../../constants';
+import { API_URL, HIGHCHARTS_THEME } from '../../constants';
+
+Highcharts.setOptions(HIGHCHARTS_THEME);
 
 @Component({
     selector: 'app-figure-times',
