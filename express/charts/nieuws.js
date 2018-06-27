@@ -39,11 +39,11 @@ module.exports = (api) => {
                         name: 'Positief',
                         data: positief,
                         color: "green"
-                    },{
+                    }, {
                         name: 'Neutraal',
                         data: neutraal,
                         color: "darkgrey"
-                    },{
+                    }, {
                         name: 'Negatief',
                         data: negatief,
                         color: "red"
@@ -73,37 +73,79 @@ module.exports = (api) => {
                     return res.json({});
                 }
 
-                var positief = [];
-                var neutraal = [];
-                var negatief = [];
+                var nieuwsRows = {};
 
                 for (var i in rows) {
                     var row = rows[i];
-                    positief.push(row.positief);
-                    neutraal.push(row.neutraal);
-                    negatief.push(row.negatief);
+                    nieuwsRows[row.w] = row;
                 }
 
-                var chart = {
-                    chart: { zoomType: "x", type: "column" },
-                    title: { text: "Nu alleen de relevante artikelen" },
-                    yAxis: { title: { text: "" } },
-                    series: [{
-                        name: 'Positief',
-                        data: positief,
-                        color: "green"
-                    },{
-                        name: 'Neutraal',
-                        data: neutraal,
-                        color: "darkgrey"
-                    },{
-                        name: 'Negatief',
-                        data: negatief,
-                        color: "red"
-                    }]
-                }
+                db.connection.query(`
+                    SELECT COUNT(*) AS aan FROM aanmeldingen
+                    GROUP BY DAYOFYEAR(datum)
+                `, [], (err, rows1, fields) => {
 
-                res.json(chart);
+                        if (err) {
+                            console.log(err);
+                            return res.json({});
+                        }
+
+                        var positief = [];
+                        var neutraal = [];
+                        var negatief = [];
+                        var aanmeldingen = [];
+
+                        for (var i in rows1) {
+                            var row = rows1[i];
+                            aanmeldingen.push(row.aan);
+                            if (i in nieuwsRows) {
+                                var nieuwsRow = nieuwsRows[i];
+                                positief.push(nieuwsRow.positief);
+                                neutraal.push(nieuwsRow.neutraal);
+                                negatief.push(nieuwsRow.negatief);
+                            } else {
+                                positief.push(0);
+                                neutraal.push(0);
+                                negatief.push(0);
+                            }
+                        }
+
+                        var chart = {
+                            chart: { zoomType: "x" },
+                            title: { text: "Nu alleen de relevante artikelen" },
+                            yAxis: [
+                                { title: { text: "Nieuws" }, opposite: true },
+                                { title: { text: "Aanmeldingen" } }
+                            ],
+                            series: [{
+                                type: "column",
+                                name: 'Positief',
+                                data: positief,
+                                yAxis: 0,
+                                color: "green"
+                            }, {
+                                type: "column",
+                                name: 'Neutraal',
+                                data: neutraal,
+                                yAxis: 0,
+                                color: "darkgrey"
+                            }, {
+                                type: "column",
+                                name: 'Negatief',
+                                data: negatief,
+                                yAxis: 0,
+                                color: "red"
+                            }, {
+                                type: "line",
+                                name: 'Aanmeldingen',
+                                yAxis: 1,
+                                data: aanmeldingen
+                            }]
+                        }
+
+                        res.json(chart);
+                    }
+                );
             }
         );
     });
