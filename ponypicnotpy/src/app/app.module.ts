@@ -14,6 +14,7 @@ import { FigureTwoComponent } from './pages/figure-two/figure-two.component';
 import { FeaturedcardsComponent } from './components/featuredcards/featuredcards.component';
 import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
 import { FigureAgeGreenComponent } from './pages/figure-age-green/figure-age-green.component';
+import { FigureGroenGrijsComponent } from './pages/figure-groengrijs/figure-groengrijs.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FigureAgeGreenComponent } from './pages/figure-age-green/figure-age-gre
     FigureTwoComponent,
     FeaturedcardsComponent,
     FigureNlpComponent,
-    FigureAgeGreenComponent
+    FigureAgeGreenComponent,
+    FigureGroenGrijsComponent
   ],
   imports: [
     BrowserModule,
