@@ -64,7 +64,7 @@ module.exports = (api) => {
                 SUM(sentiment = 0   ) as neutraal,
                 SUM(sentiment < 0) as negatief
             FROM nieuws
-            where relevantiescore > 100 and naam <> "parool"
+            where relevantiescore > 100 and naam <> "parool.nl"
             GROUP BY w
         `, [], (err, rows, fields) => {
 
@@ -146,6 +146,55 @@ module.exports = (api) => {
                         res.json(chart);
                     }
                 );
+            }
+        );
+    });
+
+    api.get("/nieuws-scatter", (req, res) => {
+
+        db.connection.query(`
+                select count(*) as aanmeldingen,
+                coalesce(nieuwsitems,0) as nieuws
+                from aanmeldingen a
+                left join (
+                    select count(*) as nieuwsitems,
+                    date(n.datum) as datum
+                    from nieuws n
+                    where n.relevantiescore > 100 and n.naam not like 'parool.nl'
+                    group by date(n.datum)
+                    ) n on n.datum = date(a.datum)
+                group by date(a.datum),nieuwsitems;
+                `, [], (err, rows, fields) => {
+
+                if (err) {
+                    console.log(err);
+                    return res.json({});
+                }
+
+                var punten = [];
+
+                for (var i in rows) {
+                    var row = rows[i];
+                    punten.push([row.nieuws, row.aanmeldingen]);
+                }
+
+                var chart = {
+                    chart: { zoomType: "xy" },
+                    title: { text: "Relevant nieuws vs. aanmeldingen" },
+                    yAxis: [
+                        { title: { text: "Aanmeldingen" } },
+                    ],
+                    xAxis: [
+                        { title: { text: "Nieuwsartikelen per dag" } },
+                    ],
+                    series: [{
+                        type: "scatter",
+                        name: 'Dag',
+                        data: punten
+                    }]
+                }
+
+                res.json(chart);
             }
         );
     });
