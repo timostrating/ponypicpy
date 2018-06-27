@@ -58,5 +58,59 @@ module.exports = (api) => {
         );
     });
 
+    api.get("/leeftijd-tijden", (req, res) => {
+
+        db.connection.query(`
+            SELECT 
+                leeftijd, avg(hour(datum)) AS uur
+            FROM 
+                ponydb.aanmeldingen 
+            WHERE 
+                leeftijd <= 80 
+            GROUP BY
+                leeftijd;
+        `, [], (err, rows, fields) => {
+
+                if (err) {
+                    console.log(err);
+                    return res.json({});
+                }
+
+                var data = [];
+
+                for (var i in rows) {
+                    var row = rows[i];
+                    data.push([row.leeftijd, row.uur]);
+                }
+
+                var chart = {
+                    chart: {
+                        zoomType: 'xy'
+                    },
+                    title: { text: "Leeftijd vs. overstaptijd" },
+                    xAxis: { title: { text: "Leeftijd" } },
+                    yAxis: { title: { text: "Uur" } },
+                    series: [
+                        {
+                            // name: "Dag",
+                            type: 'scatter',
+                            data: data
+                        }
+                        // ,
+                        // {
+                        //     name: "Trendlijn",
+                        //     type: "line",
+                        //     data: [
+                        //         [0, 350], [2946, 190]
+                        //     ]
+                        // }
+                    ]
+                }
+
+                res.json(chart);
+            }
+        );
+    });
+
 }
 
