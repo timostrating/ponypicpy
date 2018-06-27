@@ -13,6 +13,7 @@ export class FigureTwoComponent implements OnInit {
 
     Highcharts = Highcharts;
     chartOptions: object;
+    chartOptions1: object;
 
     constructor(
         private http: HttpClient
@@ -22,6 +23,10 @@ export class FigureTwoComponent implements OnInit {
         this.http.get(API_URL + "zon-scatter").subscribe(res => {
             console.log(res);
             this.chartOptions = res;
+        });
+        this.http.get(API_URL + "zon").subscribe(res => {
+            console.log(res);
+            this.chartOptions1 = res;
         });
     }
 
