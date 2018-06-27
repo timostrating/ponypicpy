@@ -22,7 +22,8 @@ const apiFiles = [
     "charts/zon",
     "charts/leeftijd",
     "charts/groen-grijs",
-    "charts/nieuws"
+    "charts/nieuws",
+    "charts/mediauitingen"
 ];
 for (var i in apiFiles)
     require("./" + apiFiles[i] + ".js")(api);
