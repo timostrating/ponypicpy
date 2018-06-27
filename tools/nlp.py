@@ -12,7 +12,7 @@ text = "De Indiase diplomate die het middelpunt vormde van een hoogoplopende ruz
 
 # Classify the text. The function returns 2 values.
 # sentiment(text) returns (polarity, subjectivity).
-sentimentAnalyse = sentiment(text)
+sentimentAnalyse = sentiment(" 10 Verschillen")
 
 print sentimentAnalyse
 
