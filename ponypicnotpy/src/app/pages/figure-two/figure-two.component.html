@@ -1,5 +1,19 @@
-<app-toolbar title="FIGUUR 2" backgroundColor="royalblue"></app-toolbar>
+<div class="page-content">
+    <app-toolbar title="Zonnestraling" backgroundColor="red"></app-toolbar>
+    
+    <div class="center-align" *ngIf="chartOptions != undefined && chartOptions1 != undefined">
+        <highcharts-chart 
+            [Highcharts]="Highcharts"
+            [options]="chartOptions"
 
-<p>
-  figure-two works!
-</p>
+            style="width: 100%; height: 650px; display: inline-block; max-width: 650px;"
+        ></highcharts-chart>
+
+        <highcharts-chart 
+            [Highcharts]="Highcharts"
+            [options]="chartOptions1"
+
+            style="width: 100%; height: 500px; display: inline-block;"
+        ></highcharts-chart>
+    </div>
+</div>

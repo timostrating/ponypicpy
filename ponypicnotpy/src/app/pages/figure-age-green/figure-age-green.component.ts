@@ -5,30 +5,24 @@ import * as Highcharts from 'highcharts';
 import { API_URL } from '../../constants';
 
 @Component({
-    selector: 'app-figure-two',
-    templateUrl: './figure-two.component.html',
-    styleUrls: ['./figure-two.component.scss']
+  selector: 'app-figure-age-green',
+  templateUrl: './figure-age-green.component.html',
+  styleUrls: ['./figure-age-green.component.scss']
 })
-export class FigureTwoComponent implements OnInit {
+export class FigureAgeGreenComponent implements OnInit {
 
     Highcharts = Highcharts;
     chartOptions: object;
-    chartOptions1: object;
 
     constructor(
         private http: HttpClient
     ) { }
 
     ngOnInit() {
-        this.http.get(API_URL + "zon-scatter").subscribe(res => {
+        this.http.get(API_URL + "leeftijd-groen").subscribe(res => {
             console.log(res);
             this.chartOptions = res;
         });
-        this.http.get(API_URL + "zon").subscribe(res => {
-            console.log(res);
-            this.chartOptions1 = res;
-        });
     }
-
 
 }
