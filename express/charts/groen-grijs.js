@@ -28,18 +28,18 @@ module.exports = (api) => {
                     grijs.push(row.sumgrijs);
                 }
 
-                console.log(grijs);
-
                 var chart = {
                     chart: { zoomType: "x" },
                     title: { text: "TEST" },
                     yAxis: { title: { text: "" } },
                     series: [{
                         name: 'Groen',
-                        data: groen
+                        data: groen,
+                        color: "green"
                     },{
                         name: 'Grijs',
-                        data: grijs
+                        data: grijs,
+                        color: "darkgrey"
                     }]
                 }
 
