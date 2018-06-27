@@ -5,9 +5,9 @@ import * as Highcharts from 'highcharts';
 import { API_URL } from '../../constants';
 
 @Component({
-  selector: 'app-figure-nieuws',
-  templateUrl: './figure-nieuws.component.html',
-  styleUrls: ['./figure-nieuws.component.scss']
+    selector: 'app-figure-nieuws',
+    templateUrl: './figure-nieuws.component.html',
+    styleUrls: ['./figure-nieuws.component.scss']
 })
 export class FigureNieuwsComponent implements OnInit {
 
@@ -15,6 +15,7 @@ export class FigureNieuwsComponent implements OnInit {
     Highcharts2 = Highcharts;
     chartOptions: object;
     chartOptions2: object;
+    chartOptions3: object;
 
     constructor(
         private http: HttpClient
@@ -26,9 +27,13 @@ export class FigureNieuwsComponent implements OnInit {
             this.chartOptions = res;
         });
         this.http.get(API_URL + "nieuws-fix").subscribe(res => {
-          console.log(res);
-          this.chartOptions2 = res;
-      });
+            console.log(res);
+            this.chartOptions2 = res;
+        });
+        this.http.get(API_URL + "nieuws-scatter").subscribe(res => {
+            console.log(res);
+            this.chartOptions3 = res;
+        });
     }
 
 }

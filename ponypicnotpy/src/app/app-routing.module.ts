@@ -30,14 +30,14 @@ const routes: Routes = [
         path: "figuur-nlp", 
         component: FigureNlpComponent,
         data: {
-            title: "hoi dit is een titel"
+            title: "Mediauitingen BenCom"
         }
     },
     { 
         path: "figuur-nieuws", 
         component: FigureNieuwsComponent,
         data: {
-            title: "hoi dit is een titel"
+            title: "Relevant nieuws"
         }
     },
     {
