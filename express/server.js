@@ -20,7 +20,7 @@ api.use((_req, res, next) => {
 const apiFiles = [
     "charts/vrije-dagen",
     "charts/zon",
-    "charts/leeftijd-groen",
+    "charts/leeftijd",
     "charts/groen-grijs",
     "charts/nieuws"
 ];
