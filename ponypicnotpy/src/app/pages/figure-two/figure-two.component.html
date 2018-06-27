@@ -1,7 +1,7 @@
 <div class="page-content">
     <app-toolbar title="Zonnestraling" backgroundColor="red"></app-toolbar>
     
-    <div class="center-align">
+    <div class="center-align" *ngIf="chartOptions != undefined && chartOptions1 != undefined">
         <highcharts-chart 
             [Highcharts]="Highcharts"
             [options]="chartOptions"

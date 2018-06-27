@@ -1,6 +1,6 @@
 <div class="page-content">
     <app-toolbar title="Leeftijd vs. groen/grijs" backgroundColor="orange"></app-toolbar>
-    <div class="center-align">
+    <div class="center-align" *ngIf="chartOptions != undefined">
         <highcharts-chart 
             [Highcharts]="Highcharts"
             [options]="chartOptions"
