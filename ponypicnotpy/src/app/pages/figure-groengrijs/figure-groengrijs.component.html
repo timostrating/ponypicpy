@@ -1,6 +1,6 @@
 <div class="page-content">
   <app-toolbar title="Groen Grijs" backgroundColor="green"></app-toolbar>
-  <highcharts-chart 
+  <highcharts-chart *ngIf="chartOptions != undefined"
       [Highcharts]="Highcharts"
       [options]="chartOptions"
 
