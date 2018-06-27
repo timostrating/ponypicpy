@@ -30,7 +30,7 @@ module.exports = (api) => {
                     var row = rows[i];
                     xAxis.push(row.yyyymmdd);
                     aanmeldingen.push(row.aant);
-                    zon.push(parseInt(row.q) / 2);
+                    zon.push(parseInt(row.q));
                 }
 
                 var chart = {
@@ -40,17 +40,22 @@ module.exports = (api) => {
                         categories: xAxis,
                         tickInterval: 14
                     },
-                    yAxis: { title: { text: "" } },
+                    yAxis: [
+                        { title: { text: "Aanmeldingen" } },
+                        { title: { text: "Zonnestraling J/cm²" }, opposite: true }
+                    ],
                     series: [
                         {
                             type: "column",
                             name: "Aanmeldingen",
                             data: aanmeldingen,
+                            yAxis: 0,
                             color: "#053568"
                         },
                         {
-                            name: "Zonnestraling",
+                            name: "Zonnestraling J/cm²",
                             data: zon,
+                            yAxis: 1,
                             color: "red"
                         }
                     ]
@@ -92,7 +97,7 @@ module.exports = (api) => {
                         zoomType: 'xy'
                     },
                     title: { text: "Zonnestraling vs. overstappers" },
-                    xAxis: { title: { text: "Zonnestraling" } },
+                    xAxis: { title: { text: "Zonnestraling J/cm²" } },
                     yAxis: { title: { text: "Overstappers" } },
                     series: [
                         {
