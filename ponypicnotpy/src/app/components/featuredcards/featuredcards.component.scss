@@ -1,6 +1,20 @@
+
+.wrapper-wrapper-wrapper {
+    width: 100vw;
+    overflow-x: auto;
+}
+
+.wrapper-wrapper {
+    display: inline-block;
+    width: 1000px;
+    height: 550px;
+}
+
+
 .wrapper {
     position: relative;
     // top: 10%;
+    margin-left: -60px;
     left: 40%;
     width: 300px;
     height: 500px;
