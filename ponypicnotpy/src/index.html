@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Ponypicnotpy</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>Ponypicnotpy</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style id="scrollbar-css">
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(0, 0, 0, .4);
+        }
+    </style>
+    <script>
+
+        var mobile = /Mobi/.test(navigator.userAgent);
+
+        if (mobile)
+            document.getElementById("scrollbar-css").remove();
+
+    </script>
 </head>
+
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
 </body>
+
 </html>

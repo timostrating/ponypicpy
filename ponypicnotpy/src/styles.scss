@@ -40,15 +40,13 @@
 @import "materialize/datepicker";
 @import "materialize/timepicker";
 
-
-
 $num: 15;                           // STYLE HELPER CLASSES
 @while $num > -1 {
-    .m#{$num}  { margin:             #{$num}em !important; }
-    .mt#{$num} { margin-top:         #{$num}em !important; }
-    .mr#{$num} { margin-right:       #{$num}em !important; }
-    .mb#{$num} { margin-bottom:      #{$num}em !important; }
-    .ml#{$num} { margin-left:        #{$num}em !important; }
+    .mr#{$num}  { margin:             #{$num}em !important; }
+    .mrt#{$num} { margin-top:         #{$num}em !important; }
+    .mrr#{$num} { margin-right:       #{$num}em !important; }
+    .mrb#{$num} { margin-bottom:      #{$num}em !important; }
+    .mrl#{$num} { margin-left:        #{$num}em !important; }
 
     .p#{$num}  { padding:            #{$num}em !important; }
     .pt#{$num} { padding-top:        #{$num}em !important; }
@@ -58,9 +56,6 @@ $num: 15;                           // STYLE HELPER CLASSES
 
     $num: $num - 1;
 }
-
-
-
 
 html, body {
     padding: 0;

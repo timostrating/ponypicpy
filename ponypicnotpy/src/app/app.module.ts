@@ -15,6 +15,7 @@ import { FeaturedcardsComponent } from './components/featuredcards/featuredcards
 import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
 import { FigureAgeGreenComponent } from './pages/figure-age-green/figure-age-green.component';
 import { FigureGroenGrijsComponent } from './pages/figure-groengrijs/figure-groengrijs.component';
+import { PercentageCardComponent } from './components/percentage-card/percentage-card.component';
 import { FigureNieuwsComponent } from './pages/figure-nieuws/figure-nieuws.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { FigureNieuwsComponent } from './pages/figure-nieuws/figure-nieuws.compo
     FigureNlpComponent,
     FigureAgeGreenComponent,
     FigureGroenGrijsComponent,
+    PercentageCardComponent,
     FigureNieuwsComponent
   ],
   imports: [

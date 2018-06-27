@@ -16,14 +16,14 @@ const routes: Routes = [
         component: IndexComponent,
         data: {
             index: true,
-            title: "hOmEPAgiNA!!"
+            title: "Home"
         }
     },
     {
         path: "vrije-feest-dagen",
         component: FigureOneComponent,
         data: {
-            title: "Vrije- / feestdagem"
+            title: "Vrije- / feestdagen"
         }
     },
     { 
@@ -41,24 +41,24 @@ const routes: Routes = [
         }
     },
     {
-        path: "figuur-leeftijd-groen", 
+        path: "figuur-leeftijd", 
         component: FigureAgeGreenComponent,
         data: {
-            title: "hoi dit is een titel"
+            title: "Leeftijd"
         }
     },
     {
         path: "figuur-groengrijs", 
         component: FigureGroenGrijsComponent,
         data: {
-            title: "hoi dit is een titel"
+            title: "Groen/grijs"
         }
     },
     {
-        path: "figuur-2",
+        path: "zon",
         component: FigureTwoComponent,
         data: {
-            title: "FigUUr 2!"
+            title: "Zonnestraling"
         }
     },
     {   // 404

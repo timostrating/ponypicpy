@@ -10,6 +10,8 @@ export class FeaturedcardsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+      var cards = document.getElementById("cards");
+      cards.scrollTo(cards.scrollWidth / 2 - cards.offsetWidth / 2 - 10, 0);
   }
 
 }

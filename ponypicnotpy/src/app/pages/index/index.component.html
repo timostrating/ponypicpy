@@ -2,18 +2,33 @@
     <div class="center">
         <h2>Ponypy</h2>
     </div>
-    
-    <h4>Feautured</h4>
-    <app-featuredcards></app-featuredcards>
-    
+</div>
+
+<app-featuredcards></app-featuredcards>
+
+<div class="container">
+
     <h4>Alle Correlaties</h4>
     <div class="row">
-        <div class="col s12 m6"> <a routerLink="/vrije-feest-dagen">Vrije- / feestdagen - 99%</a></div>
-        <div class="col s12 m6"> <a routerLink="/figuur-2">Zonnestraling - 99%</a></div>
-        <div class="col s12 m6"> <a routerLink="/figuur-nlp">Niewsuitingen Bencom - 99%</a></div>
-        <div class="col s12 m6"> <a routerLink="/figuur-leeftijd-groen">Leeftijd vs. groen/grijs - 99%</a></div>
-        <div class="col s12 m6"> Linieare regressie - 99%</div>
-        <div class="col s12 m6"> Gas en licht in het nieuws - 99%</div>
-        <div class="col s12 m6"> <a routerLink="/figuur-groengrijs">Groen VS grijs - 99%</a></div>
+        <app-percentage-card title="Nieuws" percentage="10"
+            href="/figuur-nieuws"></app-percentage-card>
+
+        <app-percentage-card title="Vrije- / feestdagen" percentage="10"
+            href="/vrije-feest-dagen"></app-percentage-card>
+
+        <app-percentage-card title="Zonnestraling" percentage="12"
+            href="/zon"></app-percentage-card>
+
+        <app-percentage-card title="Nieuwsuitingen Bencom" percentage="44"
+            href="/figuur-nlp"></app-percentage-card>
+
+        <app-percentage-card title="Leeftijd" percentage="44"
+            href="/figuur-leeftijd"></app-percentage-card>
+
+        <app-percentage-card title="Nieuwsuitingen Bencom" percentage="44"
+            href="/figuur-nlp"></app-percentage-card>
+
+        <app-percentage-card title="Groen vs. grijs" percentage="44"
+            href="/figuur-groengrijs"></app-percentage-card>
     </div>
 </div>
