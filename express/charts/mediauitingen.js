@@ -27,6 +27,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     title: {
                         text: 'De verschillende soorten nieuwsuitingen'
                     },

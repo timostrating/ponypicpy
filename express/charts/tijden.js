@@ -24,6 +24,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     chart: { zoomType: "x" },
                     title: { text: "Gemiddelde overstaptijd" },
                     xAxis: { title: { text: "Dagen" }, categories: xAxis, tickInterval: 7 },

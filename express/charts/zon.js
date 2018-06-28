@@ -34,6 +34,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     chart: { zoomType: "x" },
                     title: { text: "Zonnestraling & overstappers" },
                     xAxis: {
@@ -93,6 +94,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     chart: {
                         zoomType: 'xy'
                     },

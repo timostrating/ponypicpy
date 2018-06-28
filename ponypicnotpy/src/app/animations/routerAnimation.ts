@@ -13,7 +13,7 @@ export const routerAnimation = trigger('routerAnimation', [
             [
                 style({
                     opacity: 0,
-                    boxShadow: "0px 0px 60px 0px #cccccc7d"
+                    // boxShadow: "0px 0px 60px 0px #cccccc7d"
                 })
             ]
         ),
@@ -21,15 +21,15 @@ export const routerAnimation = trigger('routerAnimation', [
             ':leave',
             [
                 style({ opacity: 1 }),
-                animate('0.28s', style({ opacity: 1 }))
+                animate('0.75s', style({ opacity: 1 }))
             ],
             { optional: true }
         ),
         query(
             ':enter',
             [
-                style({ transform: "translateX(100%)", opacity: 1 }),
-                animate('0.28s ease-out', style({ transform: "translateX(0%)" }))
+                style({ transform: "translateX(100%)", opacity: 0.2 }),
+                animate('0.75s ease-out', style({ transform: "translateX(0%)", opacity: 1 }))
             ],
             { optional: true }
         )
@@ -40,9 +40,9 @@ export const routerAnimation = trigger('routerAnimation', [
             [
                 style({ 
                     transform: "translateX(0%)",
-                    boxShadow: "0px 0px 60px 0px #cccccc7d"
+                    // boxShadow: "0px 0px 60px 0px #cccccc7d"
                 }),
-                animate('0.28s ease-in', style({ transform: "translateX(100%)" }))
+                animate('0.75s ease-in', style({ transform: "translateX(100%)" }))
             ],
             { optional: true }
         ),

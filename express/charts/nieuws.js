@@ -32,6 +32,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     chart: { zoomType: "x" },
                     title: { text: "Het sentiment van alle artikelen" },
                     yAxis: { title: { text: "" } },
@@ -111,6 +112,7 @@ module.exports = (api) => {
                         }
 
                         var chart = {
+                            plotOptions: { series: { animation: { duration: 4000 } } },
                             chart: { zoomType: "x" },
                             title: { text: "Nu alleen de relevante artikelen" },
                             yAxis: [
@@ -179,6 +181,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     chart: { zoomType: "xy" },
                     title: { text: "Relevant nieuws vs. aanmeldingen" },
                     yAxis: [

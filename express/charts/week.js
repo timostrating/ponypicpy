@@ -22,6 +22,7 @@ module.exports = (api) => {
                 }
 
                 var chart = {
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     chart: { zoomType: "x" },
                     title: { text: "Verloop dag" },
                     xAxis: { title: { text: "Uren" } },
