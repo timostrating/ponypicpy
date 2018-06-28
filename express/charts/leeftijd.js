@@ -172,5 +172,58 @@ module.exports = (api) => {
         );
     });
 
+
+    api.get("/leeftijd-tijden", (req, res) => {
+
+        db.connection.query(`
+            select groenpersentage, avg(l), group_concat(w) from
+
+                (SELECT 
+                    woonplaats as w, 
+                    count(aanmeldingen.id) as aantal, 
+                    avg(Leeftijd) as l, 
+                    round(SUM(GroenGrijs="groen") / (SUM(GroenGrijs="groen")+SUM(GroenGrijs="grijs")) * 10) as groenpersentage
+                FROM ponydb.aanmeldingen 
+                group by w 
+                having aantal > 10
+                order by groenpersentage desc, l desc) as subquery
+            
+            where groenpersentage <> 0 and groenpersentage <> 10
+            group by groenpersentage;
+        `, [], (err, rows, fields) => {
+
+                if (err) {
+                    console.log(err);
+                    return res.json({});
+                }
+
+                var data = [];
+
+                for (var i in rows) {
+                    var row = rows[i];
+                    data.push([row.leeftijd, row.uur]);
+                }
+
+                var chart = {
+                    chart: {
+                        zoomType: 'x'
+                    },
+                    title: { text: "Groene en grijze steden met hun gemiddelde Leeftijd" },
+                    xAxis: { title: { text: "Leeftijd" } },
+                    yAxis: { title: { text: "Uur" } },
+                    series: [
+                        {
+                            name: "Leeftijd vs. overstaptijd",
+                            type: 'columns',
+                            data: data
+                        }
+                    ]
+                }
+
+                res.json(chart);
+            }
+        );
+    });
+
 }
 
