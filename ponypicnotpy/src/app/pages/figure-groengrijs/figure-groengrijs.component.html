@@ -1,9 +1,27 @@
 <div class="page-content">
-  <app-toolbar title="Groen Grijs" backgroundColor="green"></app-toolbar>
-  <highcharts-chart *ngIf="chartOptions != undefined"
-      [Highcharts]="Highcharts"
-      [options]="chartOptions"
+    <app-toolbar title="Groen Grijs" backgroundColor="green"></app-toolbar>
+    <highcharts-chart *ngIf="chartOptions != undefined" [Highcharts]="Highcharts"
+        [options]="chartOptions" style="width: 100%; height: 500px; display: block;"></highcharts-chart>
+    <div class="container mrb5">
+        In deze grafiek is duidelijk te zien dat, naarmate het jaar vordert,
+        er meer overstappers voor groene stroom hebben gekozen
+        dan voor grijze stroom. Deze trend zou nog vergeleken
+        kunnen worden met de prijzen van beide energie soorten.
+        Nadat je dit doet kun je namelijk met redelijke zekerheid
+        zeggen dat dit een trend is die ook voor de aankomende
+        jaren zal doorlopen.
+        <br>
+        <br>
 
-      style="width: 100%; height: 500px; display: block;"
-  ></highcharts-chart>
+        <h3>Conclusie</h3>
+        De grootste giganten zoals McDonalds doen er tegenwoordig alles
+        is alles aan om hun imago zo goed mogelijk te krijgen.
+        Als dit tegenwoordig een daadwerkelijke trend is dan
+        zou Bencom dit inzicht kunnen gebruiken om zijn website
+        te richten op deze doelgroep. Artikelen over hoe er kosten
+        bespaard kunnen worden of hoe je duurzamer met gas en
+        licht om kan gaan zullen het bijvoorbeeld bij deze doelgroep
+        beter doen.
+
+    </div>
 </div>

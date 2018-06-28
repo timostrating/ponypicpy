@@ -1,21 +1,25 @@
 <div class="page-content">
     <app-toolbar title="Leeftijd" backgroundColor="orange"></app-toolbar>
     <div class="center-align" *ngIf="chartOptions != undefined">
-        <highcharts-chart 
-            [Highcharts]="Highcharts"
-            [options]="chartOptions"
-
-            style="width: 100%; height: 650px; display: inline-block; max-width: 650px"
-        ></highcharts-chart>
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
+            style="width: 100%; height: 650px; display: inline-block; max-width: 650px"></highcharts-chart>
+    </div>
+    <div class="container p4">
+        In de grafiek hierboven is goed te zien dat er een verband is
+        tussen de leeftijd van overstappers en of ze voor groene
+        of grijze stroom kiezen. De mensen jonger en ouder dan
+        ongeveer 50 jaar kiezen minder vaak voor groene stroom.
     </div>
 
 
     <div class="center-align" *ngIf="chartOptions1 != undefined">
-        <highcharts-chart 
-            [Highcharts]="Highcharts"
-            [options]="chartOptions1"
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions1"
+            style="width: 100%; height: 650px; display: inline-block; max-width: 650px"></highcharts-chart>
+    </div>
 
-            style="width: 100%; height: 650px; display: inline-block; max-width: 650px"
-        ></highcharts-chart>
+    <div class="container p4">
+        In de rechter grafiek is een sterk dalende trend te zien. Deze
+        wordt veroorzaakt doordat oudere mensen gemiddeld steeds
+        vroeger overstappen op de dag.
     </div>
 </div>
