@@ -17,6 +17,8 @@ import { FigureAgeGreenComponent } from './pages/figure-age-green/figure-age-gre
 import { FigureGroenGrijsComponent } from './pages/figure-groengrijs/figure-groengrijs.component';
 import { PercentageCardComponent } from './components/percentage-card/percentage-card.component';
 import { FigureNieuwsComponent } from './pages/figure-nieuws/figure-nieuws.component';
+import { FigureWeekComponent } from './pages/figure-week/figure-week.component';
+import { FigureTimesComponent } from './pages/figure-times/figure-times.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FigureNieuwsComponent } from './pages/figure-nieuws/figure-nieuws.compo
     FigureAgeGreenComponent,
     FigureGroenGrijsComponent,
     PercentageCardComponent,
-    FigureNieuwsComponent
+    FigureNieuwsComponent,
+    FigureWeekComponent,
+    FigureTimesComponent
   ],
   imports: [
     BrowserModule,

@@ -38,7 +38,7 @@ module.exports = (api) => {
 
                         plotBands.push(
                             {
-                                color: "#c6c3e5",
+                                color: "#008c2e",
                                 from: parseInt(i) - .5,
                                 to: parseInt(i) + .5
                             }
@@ -47,7 +47,7 @@ module.exports = (api) => {
                     } else if (row.weekend) {
                         plotBands.push(
                             {
-                                color: "#FCFFC5",
+                                color: "#7a3700",
                                 from: parseInt(i) - .5,
                                 to: parseInt(i) + .5
                             }

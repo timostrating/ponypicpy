@@ -8,6 +8,8 @@ import { FigureNlpComponent } from './pages/figure-nlp/figure-nlp.component';
 import { FigureAgeGreenComponent } from './pages/figure-age-green/figure-age-green.component';
 import { FigureGroenGrijsComponent } from './pages/figure-groengrijs/figure-groengrijs.component';
 import { FigureNieuwsComponent } from './pages/figure-nieuws/figure-nieuws.component';
+import { FigureWeekComponent } from './pages/figure-week/figure-week.component';
+import { FigureTimesComponent } from './pages/figure-times/figure-times.component';
 
 const routes: Routes = [
     { // index
@@ -30,14 +32,14 @@ const routes: Routes = [
         path: "figuur-nlp", 
         component: FigureNlpComponent,
         data: {
-            title: "hoi dit is een titel"
+            title: "Mediauitingen BenCom"
         }
     },
     { 
         path: "figuur-nieuws", 
         component: FigureNieuwsComponent,
         data: {
-            title: "hoi dit is een titel"
+            title: "Relevant nieuws"
         }
     },
     {
@@ -45,6 +47,20 @@ const routes: Routes = [
         component: FigureAgeGreenComponent,
         data: {
             title: "Leeftijd"
+        }
+    },
+    {
+        path: "figuur-week", 
+        component: FigureWeekComponent,
+        data: {
+            title: "Verloop week"
+        }
+    },
+    {
+        path: "figuur-overstap-tijden", 
+        component: FigureTimesComponent,
+        data: {
+            title: "Gemiddelde overstaptijden"
         }
     },
     {

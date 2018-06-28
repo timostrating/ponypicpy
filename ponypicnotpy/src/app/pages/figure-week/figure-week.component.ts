@@ -7,30 +7,22 @@ import { API_URL, HIGHCHARTS_THEME } from '../../constants';
 Highcharts.setOptions(HIGHCHARTS_THEME);
 
 @Component({
-    selector: 'app-figure-nlp',
-    templateUrl: './figure-nlp.component.html',
-    styleUrls: ['./figure-nlp.component.scss']
+    selector: 'app-figure-week',
+    templateUrl: './figure-week.component.html',
+    styleUrls: ['./figure-week.component.scss']
 })
-export class FigureNlpComponent implements OnInit {
+export class FigureWeekComponent implements OnInit {
 
     Highcharts = Highcharts;
-    chartOptions;
+    chartOptions: object;
 
-    constructor(
-        private http: HttpClient
-    ) { }
+    constructor(private http: HttpClient) { }
 
     ngOnInit() {
-        this.http.get(API_URL + "mediauitingen").subscribe(res => {
+        this.http.get(API_URL + "week").subscribe(res => {
             console.log(res);
             this.chartOptions = res;
         });
     }
 
 }
-
-
-
-
-
-

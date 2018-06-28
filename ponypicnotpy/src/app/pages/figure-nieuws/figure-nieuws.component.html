@@ -1,45 +1,42 @@
 <div class="page-content">
-  <app-toolbar title="Nieuws" backgroundColor="royalblue"></app-toolbar>
-  <div *ngIf="chartOptions != undefined">
-      <highcharts-chart 
-          [Highcharts]="Highcharts"
-          [options]="chartOptions"
+    <app-toolbar title="Nieuws" backgroundColor="royalblue"></app-toolbar>
+    <div *ngIf="chartOptions != undefined">
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
+            style="width: 100%; height: 500px; display: block;"></highcharts-chart>
+    </div>
 
-          style="width: 100%; height: 500px; display: block;"
-      ></highcharts-chart>
-  </div>
+    <div class="container center p4">
+        <p>
+            Het is interessant om te zien dat er een gorte piek midden in
+            het jaar valt.
+        </p>
 
-  <div class="container center p4">
-    <p>
-        Het is interessant om te zien dat er een grote piek midden in het jaar valt. 
-    </p>
+        <p>
+            Als een artikel meerdere van de volgende woorden bevat dan wordt
+            het gezien als een relevant artikel.
+        </p>
 
-    <p>
-      Als een artikel meerdere van de volgende woorden bevat dan wordt het gezien als een relevant artikel.
-    </p>
+        <p>
+            licht, gas, energie, stroom, electriciteit, overstappen, windenergie,
+            zonne-energie, kernenergie, zonnepanelen, windmolen,
+            windturbine, centrale, budget energie, delta, dong
+            energy, e.on, electrabel, eneco, energiedirect.nl,
+            energieflex, essent, greenchoice, huismerk energie,
+            nederlandse energie maatschappij, nuon, oxxio, qurrent,
+            vandebron, groene, grijse, opwekken, co2, duurzaam,
+            provider, aanbieder, leverancier, duurder, goedkoper,
+            prijs valt, prijs is, prijzen, dalende prij, nam,
+            aardbeving, watt
+        </p>
+    </div>
 
-    <p>
-        licht,
-        gas, 
-        energie, stroom, electriciteit, 
-        overstappen, 
-        windenergie, zonne-energie, kernenergie, zonnepanelen, windmolen, windturbine, centrale,
-        budget energie, delta, dong energy, e.on, electrabel, eneco, energiedirect.nl, energieflex, essent, greenchoice, huismerk energie, nederlandse energie maatschappij, nuon, oxxio, qurrent, vandebron,
-        groene, grijse, opwekken,
-        co2, duurzaam, 
-        provider, aanbieder, leverancier, 
-        duurder, goedkoper, prijs valt, prijs is, prijzen, dalende prij,
-        nam, aardbeving,
-        watt
-    </p>
-  </div>
+    <div *ngIf="chartOptions2 != undefined">
+        <highcharts-chart [Highcharts]="Highcharts2" [options]="chartOptions2"
+            style="width: 100%; height: 500px; display: block;"></highcharts-chart>
+    </div>
 
-  <div *ngIf="chartOptions2 != undefined">
-    <highcharts-chart 
-        [Highcharts]="Highcharts2"
-        [options]="chartOptions2"
-
-        style="width: 100%; height: 500px; display: block;"
-    ></highcharts-chart>
-  </div>
+    <div class="center-align" *ngIf="chartOptions3 != undefined">
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions3"
+            style="width: 100%; height: 650px; display: inline-block; max-width: 650px"></highcharts-chart>
+    </div>
 </div>

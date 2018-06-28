@@ -35,7 +35,7 @@ module.exports = (api) => {
                     },
                     title: { text: "Leeftijd vs. groen/grijs" },
                     xAxis: { title: { text: "Leeftijd" } },
-                    yAxis: { title: { text: "Percentage groen/grijs" } },
+                    yAxis: { title: { text: "Percentage groen" } },
                     series: [
                         {
                             name: "Leeftijd vs. groen/grijs",
