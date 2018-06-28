@@ -1,14 +1,51 @@
 <div class="page-content">
     <app-toolbar title="Vrije- / feestdagen" backgroundColor="royalblue"></app-toolbar>
     <div *ngIf="chartOptions != undefined">
-        <highcharts-chart 
-            [Highcharts]="Highcharts"
-            [options]="chartOptions"
-
-            style="width: 100%; height: 500px; display: block;"
-        ></highcharts-chart>
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
+            style="width: 100%; height: 500px; display: block;"></highcharts-chart>
     </div>
-    <div class="legend-square" style="background: #008c2e"></div><b>Vrije- / feestdag</b>
-    <br>
-    <div class="legend-square" style="background: #7a3700"></div><b>Weekend</b>
+
+
+    <div class="container mrb5">
+
+
+        <div class="legend-square" style="background: #008c2e"></div>
+        <b>Vrije- / feestdag</b>
+        <br>
+        <div class="legend-square" style="background: #7a3700"></div>
+        <b>Weekend</b>
+
+        <br><br>
+
+        Wij hebben ook gekeken of vrije dagen en feestdagen invloed hebben
+        op het aantal inschrijvingen. Wij dachten voordat het
+        project begon dat het op de zaterdag de meeste overstappen
+        zouden zijn. Uit de cijfers blijkt echter het omgekeerde.
+        Onze gedachtegang was dat mensen het door de week druk
+        hebben en daarom de zaterdagavond gebruiken om nog wat
+        dingetjes te regel. De cijfers wijzen juist de omgekeerde
+        kant op. Een logische manier van denken dat een grondslag
+        heeft op de cijfers is bijvoorbeeld: “Mensen gebruiken
+        het weekend juist om uit te rusten en even nergens over
+        na te denken. Op de maandag komt alleen iedereen er achter
+        dat het echte leven ook weer begint. Doordat veel mensen
+        deze realisatie hebben pakken ze gelijk alles aan.”
+
+        <h3>
+            Conclusie
+        </h3>
+        Er is duidelijk te zien dat er een wekelijkse cyclus in de aanmeldingen
+        zit. Via de website (pony.aitai.nl) kan er in worden
+        ingezoomd op individuele feestdagen. Zodra je dit doet
+        zie je niet direct verbanden maar zie je soms wel interessante
+        gebeurtenissen. Een van de dingen die je bijvoorbeeld
+        ziet is dat er de dag na moederdag direct een enorme
+        piek is. Wij denken dat dit te verklaren is doordat gas
+        en licht een een onderwerp is wat mogelijk wordt besproken
+        op dit soort dagen in de familie.
+        <br>
+        <br>Er zijn dus geen directe verbanden maar wel veel indirecte
+        reacties op sommige feestdagen.
+
+    </div>
 </div>

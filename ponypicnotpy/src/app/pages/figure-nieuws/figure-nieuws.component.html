@@ -6,28 +6,47 @@
     </div>
 
     <div class="container center p4">
-        <p>
-            Het is interessant om te zien dat er een gorte piek midden in
-            het jaar valt.
-        </p>
-
-        <p>
-            Als een artikel meerdere van de volgende woorden bevat dan wordt
-            het gezien als een relevant artikel.
-        </p>
-
-        <p>
-            licht, gas, energie, stroom, electriciteit, overstappen, windenergie,
+        Het is interessant om te zien dat er een grote piek midden in
+        het jaar valt. Dit zal deels komen omdat de data die
+        wij van het internet hebben vergaard niet correct is.
+        Er zijn bijvoorbeeld kranten die alleen laten zien wanneer
+        ze het artikel voor het laatst hebben aangepast.
+        <br>
+        <br> Het zijn nu nog allemaal verschillende artikelen over
+        verschillende onderwerpen. Om de artikelen eruit te filteren
+        die niks met energie providers/etc. te maken hebben,
+        hebben wij ervoor gekozen om een punten systeem toe te
+        passen. We hebben een lijst van relevante woorden samengesteld
+        door meerdere artikelen over gas en licht te lezen en
+        de belangrijkste woorden te noteren:
+        <br>
+        <br>
+        <p style="font-style: italic; color: lightblue">
+            licht, gas, energie, stroom, elektriciteit, overstappen, windenergie,
             zonne-energie, kernenergie, zonnepanelen, windmolen,
             windturbine, centrale, budget energie, delta, dong
             energy, e.on, electrabel, eneco, energiedirect.nl,
             energieflex, essent, greenchoice, huismerk energie,
             nederlandse energie maatschappij, nuon, oxxio, qurrent,
-            vandebron, groene, grijse, opwekken, co2, duurzaam,
+            vandebron, groene, grijze, opwekken, co2, duurzaam,
             provider, aanbieder, leverancier, duurder, goedkoper,
             prijs valt, prijs is, prijzen, dalende prij, nam,
             aardbeving, watt
         </p>
+        Vervolgens hebben we met behulp van een script deze woorden laten
+        tellen in 75.000 artikelen. Daarna vermenigvuldigen we
+        de frequentie van elk woord met elkaar om tot een relevantie-score
+        te komen.
+        <br>
+        <br>
+        <b>Voorbeeld:</b>
+        <br> In een artikel komt het woord ‘Energie’ 5 keer voor
+        en het woord ‘Duurder’ 4 keer.
+        <br>De relevantiescore wordt dan 5*4 = 20
+        <br>
+        <br>Op deze manier hebben alle 75.000 artikelen een relevantiescore,
+        en kunnen we dus niet-relevante artikelen eruit filteren.
+
     </div>
 
     <div *ngIf="chartOptions2 != undefined">
@@ -35,8 +54,27 @@
             style="width: 100%; height: 500px; display: block;"></highcharts-chart>
     </div>
 
+    <div class="container">
+        Deze nieuwe grafiek geeft met staven in verschillende kleuren
+        aan wat het sentiment van de relevante artikelen zijn.
+        Rood betekent dat het artikel negatief is. Groen betekent
+        positief en grijs betekent neutraal. Iets wat direct
+        opvalt, is dat er zeer weinig neutrale artikelen zijn
+        nu we alleen de relevante artikelen bekijken.
+        <br>
+        <br>We hebben hier ook de aanmeldingen trend bij gezet zodat
+        er gekeken kan worden hoeveel deze overeenkomen.
+
+    </div>
+
     <div class="center-align" *ngIf="chartOptions3 != undefined">
         <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions3"
             style="width: 100%; height: 650px; display: inline-block; max-width: 650px"></highcharts-chart>
+    </div>
+
+    <div class="container mrb5">
+        Ditzelfde hebben wij gedaan met de keren dat Bencom zelf in het
+        nieuws was.
+        <a routerLink="/figuur-nlp">Dat is hier te zien</a>
     </div>
 </div>

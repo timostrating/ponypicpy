@@ -1,19 +1,40 @@
 <div class="page-content">
     <app-toolbar title="Zonnestraling" backgroundColor="red"></app-toolbar>
-    
+
     <div class="center-align" *ngIf="chartOptions != undefined && chartOptions1 != undefined">
-        <highcharts-chart 
-            [Highcharts]="Highcharts"
-            [options]="chartOptions"
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions"
+            style="width: 100%; height: 650px; display: inline-block; max-width: 650px;"></highcharts-chart>
 
-            style="width: 100%; height: 650px; display: inline-block; max-width: 650px;"
-        ></highcharts-chart>
+        <div class="container">
+            <p>
+                We hebben naar allerlei soorten weerdata gekeken in relatie met
+                de overstappen. De temperatuur en hoeveelheid
+                regen dat er gevallen was lag het meest voor
+                de hand. Deze data vertoonde alleen geen verrassende
+                correlaties. Uiteindelijk zijn we door meerdere
+                soorten weerdata te koppelen terecht gekomen
+                bij de hoeveelheid zonnestralen. Deze toonde
+                een interessante correlatie. Als er minder zonnestralen
+                het vasteland bereiken dan stappen meer mensen
+                over. Als je naar de tweede grafiek kijkt, kun
+                je dit ook duidelijk zien. Een oorzaak hiervan
+                zou kunnen zijn dat mensen bij veel zonnestraling
+                veel stroom opwekken met hun zonnepanelen en
+                hierdoor minder de behoefte zien om over te stappen
+                naar een andere energieprovider.
+            </p>
 
-        <highcharts-chart 
-            [Highcharts]="Highcharts"
-            [options]="chartOptions1"
+        </div>
 
-            style="width: 100%; height: 500px; display: inline-block;"
-        ></highcharts-chart>
+        <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions1"
+            style="width: 100%; height: 500px; display: inline-block;"></highcharts-chart>
+
+        <div class="container">
+            <h3>Conclusie</h3>
+            <p>
+                Hoe meer zonnestraling/globale straling, des te minder overstappers.
+
+            </p>
+        </div>
     </div>
 </div>
