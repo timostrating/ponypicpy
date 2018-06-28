@@ -103,11 +103,13 @@ module.exports = (api) => {
                         {
                             name: "Dag",
                             type: 'scatter',
+                            color: "red",
                             data: data
                         },
                         {
                             name: "Trendlijn",
                             type: "line",
+                            color: "black",
                             data: [
                                 [0, 350], [2946, 190]
                             ]
