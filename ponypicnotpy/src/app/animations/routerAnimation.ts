@@ -12,7 +12,7 @@ export const routerAnimation = trigger('routerAnimation', [
             ':enter',
             [
                 style({
-                    opacity: 0,
+                    opacity: 0
                     // boxShadow: "0px 0px 60px 0px #cccccc7d"
                 })
             ]
@@ -28,7 +28,7 @@ export const routerAnimation = trigger('routerAnimation', [
         query(
             ':enter',
             [
-                style({ transform: "translateX(100%)", opacity: 0.2 }),
+                style({ transform: "translateX(100%)", opacity: 1 }),
                 animate('0.75s ease-out', style({ transform: "translateX(0%)", opacity: 1 }))
             ],
             { optional: true }
