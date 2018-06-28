@@ -10,6 +10,8 @@ export class PercentageCardComponent implements OnInit {
     @Input() title: string;
     @Input() percentage: number;
     @Input() href: string;
+    @Input() backgroundColor: string;
+    @Input() color: string;
 
     constructor() { }
 

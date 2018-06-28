@@ -1,5 +1,5 @@
 <div class="col s12 m6 wrapper">
-    <a class="card waves-effect" routerLink="{{href}}">
+    <a class="card waves-effect" [style.backgroundColor]="backgroundColor" [style.color]="color" routerLink="{{href}}">
         {{title}}
         <span class="percentage">{{percentage}}</span>
     </a>
