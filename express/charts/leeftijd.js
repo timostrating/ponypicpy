@@ -33,6 +33,7 @@ module.exports = (api) => {
                     chart: {
                         zoomType: 'xy'
                     },
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     title: { text: "Leeftijd vs. groen/grijs" },
                     xAxis: { title: { text: "Leeftijd" } },
                     yAxis: { title: { text: "Percentage groen" } },
@@ -147,6 +148,7 @@ module.exports = (api) => {
                     chart: {
                         zoomType: 'xy'
                     },
+                    plotOptions: { series: { animation: { duration: 4000 } } },
                     title: { text: "Leeftijd vs. overstaptijd" },
                     xAxis: { title: { text: "Leeftijd" } },
                     yAxis: { title: { text: "Uur" } },
