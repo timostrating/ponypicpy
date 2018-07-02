@@ -17,7 +17,7 @@ The website can be reached on [pony.aitai.nl](http://pony.aitai.nl)
 
 ## installation
 
-The API - create a file named database-connection.json in the express folder. Server.js will show an example of how this file should look.
+The API - create a file named database-connection.json in the express folder. Database.js will show an example of how this file should look.
 
 ```Bash
 cd ./express
