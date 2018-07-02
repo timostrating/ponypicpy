@@ -19,16 +19,16 @@ The website can be reached on [pony.aitai.nl](http://pony.aitai.nl)
 
 The API - create a file named database-connection.json in the express folder. Server.js will show an example of how this file should look.
 
-'''Bash
+```Bash
 cd ./express
 npm install
 node server
-'''
+```
 
 The website
-'''Bash
+```Bash
 cd ./ponypicnotpy
 npm install
-npm install -g @angular/cli # If you don't have angular installed already
+npm install -g @angular/cli    # If you don't have angular installed already
 ng serve
-'''
+```
