@@ -14,3 +14,21 @@ The website can be reached on [pony.aitai.nl](http://pony.aitai.nl)
 * [Hilko Janssen](https://github.com/hilkojj)
 * [Timo Strating](https://github.com/timostrating) 
 * [and sometimes Chris Roscher](https://github.com/aitai)
+
+## installation
+
+The API - create a file named database-connection.json in the express folder. Server.js will show an example of how this file should look.
+
+'''Bash
+cd ./express
+npm install
+node server
+'''
+
+The website
+'''Bash
+cd ./ponypicnotpy
+npm install
+npm install -g @angular/cli # If you don't have angular installed already
+ng serve
+'''
